@@ -1,0 +1,518 @@
+.attribution { font-size: 11px; text-align: center; margin: 0; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    /* padding: 30px 30px; */
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: hsl(192, 100%, 9%);
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6,auto);
+    grid-template-areas: 
+        "1"
+        "2"
+        "3"
+        "4"
+        "5"
+        "6"
+    ;
+    /* margin-bottom: 100px; */
+    
+}
+
+.section-img {
+    margin: 100px auto 100px auto;
+}
+
+.padding {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+button {
+    -webkit-box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.45); 
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.45);
+}
+
+/* ====== mobile: introduction styling ====== */
+
+.introduction {
+    grid-area: 1;
+    padding-bottom: 200px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: 
+    "logo b1"
+    "h1 h1"
+    "p p"
+    "b2 b2"
+    "img img"
+    "f1 f1"
+    "f2 f2"
+    ;
+
+    background: url(images/bg-section-top-mobile-1.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+.introduction > img:first-child {
+    grid-area: logo;
+    float: left;
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.int-btn-one {
+    grid-area: b1;
+    /* float: right; */
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 30px;
+    border-radius: 23px;
+    width: 80px;
+    height: 25px;
+    line-height: 12.5px;
+    font-size: 12px;
+    color: hsl(322, 100%, 66%);
+    border-color: hsl(322, 100%, 66%);
+}
+
+.btn-primary:hover {
+    /* color: hsl(321, 100%, 78%); */
+    border-color: hsl(321, 100%, 78%);
+    background-color: hsl(321, 100%, 78%);
+}
+
+.btn-outline-primary:hover {
+    color: hsl(321, 100%, 78%);
+    border-color: hsl(321, 100%, 78%);
+    background-color: #fff;
+}
+
+.introduction > h1 {
+    grid-area: h1;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.introduction > p {
+    grid-area: p;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.int-btn-two{
+    grid-area: b2;
+    width: 250px;
+    height: 40px;
+    margin: 30px auto 100px auto;
+    border-radius: 23px;
+    color: #fff;
+    background-color: hsl(322, 100%, 66%);
+    border-color: hsl(322, 100%, 66%);
+}
+
+
+
+.introduction > img:nth-child(6) {
+    grid-area: img;
+    margin: 0 auto 100px auto;
+}
+
+.communities {
+    grid-area: f1;
+}
+
+.messages {
+    grid-area: f2;
+}
+
+figure {
+    margin: 80px auto 100px auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    ".. img .."
+    ".. h2 .."
+    "cap cap cap"
+    ;
+    text-align: left;
+}
+
+figure > img {
+    grid-area: img;
+    width: 30px;
+}
+
+figure > h2 {
+    /* I want the communities icon to float over the follower counter! is display inline-block and width working? */
+    width: 100%;
+    font-weight: 600;
+    font-size: 46px;
+    grid-area: h2;
+}
+
+figcaption {
+    opacity: 0.5;
+    font-size: 12px;
+    grid-area: cap;
+}
+
+
+
+/* ====== mobile: grow together styling ====== */
+
+
+.grow-together {
+    grid-area: 2;
+    background-color: hsl(207, 100%, 98%);
+    padding-bottom: 100px;
+}
+
+.grow-together > img {
+    margin-bottom: 100px;
+}
+
+
+/* ====== mobile: flowing conversations styling ====== */
+
+.flowing-conversations {
+    grid-area: 3;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: url(images/bg-section-bottom-mobile-1.svg), url(images/bg-section-top-mobile-2.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    background-size: contain;
+
+    
+}
+
+.flowing-conversations > img {
+    margin-top: 50px;
+}
+
+
+
+
+/* ====== mobile: users styling ====== */
+
+.your-users {
+    grid-area: 4;
+    /* padding-top: 200px; */
+    background-color: hsl(207, 100%, 98%);
+}
+
+/* .your-users > img {
+    margin-bottom: 50px;
+} */
+
+
+/* ====== mobile: call for action styling ====== */
+
+.call-for-action {
+    grid-area: 5;
+    padding-bottom: 200px;
+    padding-top: 200px;
+    background: url(images/bg-section-bottom-mobile-2.svg), url(images/bg-footer-top-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    background-size: contain;
+    
+}
+
+.call-for-action > button {
+    border-radius: 23px;
+    width: 250px;
+    color: #fff;
+    background-color: hsl(322, 100%, 66%);
+    border-color: hsl(322, 100%, 66%);
+}
+
+/* ====== mobile: newsletter for action styling ====== */
+
+.newsletter {
+    grid-area: 6;
+    text-align: left;
+    /* has a wavy dark-green background! */
+    margin-bottom: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+form > input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+form > input:invalid {
+    color: hsl(0, 100%, 63%);
+}
+
+input:hover {
+    border-color: hsl(321, 100%, 78%);
+    cursor: pointer;
+}
+
+form > button {
+    float: right;
+    width: 150px;
+}
+
+form > .btn-primary {
+    color: #fff;
+    background-color: hsl(322, 100%, 66%);
+    border-color: hsl(322, 100%, 66%);
+}
+
+/* ====== mobile: footer styling ====== */
+
+footer {
+    text-align: left;
+    background-color: hsl(192, 100%, 9%);
+    color: #fff;
+}
+
+footer > section > img {
+    /* float: left; */
+    width: 180px;
+    color: #fff;
+}
+
+footer > section > p {
+    margin-bottom: 40px;
+}
+
+footer > section > nav > ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact {
+    margin-bottom: 40px;
+}
+
+.contact > li {
+    margin-top: 10px;
+    
+}
+
+.social > li {
+    display: inline-block;
+    /* background-color: #fff; */
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+.social > li:hover {
+ background-color: hsl(228, 92%, 74%);   
+    
+}
+
+.legal {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ====== desktop styling ====== */
+@media (min-width: 1440px) {
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "left right"
+        ;
+    }
+
+    .section-img {
+        width: 400px;
+    }
+
+    .wrapper {
+        width: 400px;
+        text-align: left;
+        margin: auto;
+        
+    }
+
+/* ====== desktop: introduction styling ====== */
+    .introduction {
+        grid-area: 1;
+        padding-bottom: 200px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: 
+        "logo b1"
+        "h1 h1"
+        "p p"
+        "b2 b2"
+        "img img"
+        "f1 f2"
+        ;
+
+        background: url(images/bg-section-top-desktop-1.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        padding: 50px 50px 150px 50px;
+    }
+
+    .introduction > img:first-child {   
+        width: 150px;
+    }
+
+    .introduction > img:nth-child(6) {
+        /* grid-area: img; */
+        margin-left: auto;
+        margin-right: auto;
+        width: 800px;
+    }
+
+    .introduction > p {
+        padding: 0 30rem;
+    }
+
+    figure {
+        grid-template-areas: 
+        ".. img .."
+        ".. h2 .."
+        ".. cap .."
+        ;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    figure > img {
+        width: 25px;
+        margin-top: auto;
+        margin-bottom: 0;
+        vertical-align: bottom;
+    }
+
+/* ====== desktop: grow together styling ====== */
+.grow-together > .wrapper {
+    grid-area: left;
+    
+    
+}
+
+.grow-together > img {
+    /* margin-bottom: 50px; */
+    grid-area: right;
+}
+
+/* ====== desktop: flowing conversations styling ====== */
+.flowing-conversations {
+    
+    background-image: url(images/bg-section-bottom-desktop-1.svg), url(images/bg-section-top-desktop-2.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    background-size: contain;
+}
+
+.flowing-conversations > img {
+    padding-bottom: 50px;
+    grid-area: left;
+
+    
+}
+
+.flowing-conversations > .wrapper {
+    grid-area: right;
+}
+
+/* ====== desktop: users styling ====== */
+.your-users > .wrapper {
+    grid-area: left;
+}
+
+.your-users > img {
+    margin-bottom: 50px;
+    grid-area: right;
+}
+
+
+/* ====== desktop: call-for-action styling ====== */
+.call-for-action {
+    padding-bottom: 300px;
+    padding-top: 300px;
+    background-image: url(images/bg-section-bottom-desktop-1.svg), url(images/bg-footer-top-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    background-size: contain;
+}
+
+/* ====== desktop: footer styling ====== */
+footer {
+    column-gap: 400px;
+    padding-top: 100px;
+}
+
+footer > section > p {
+    width: 300px;
+}
+
+.legal {
+    grid-area: left;
+    padding-left: 100px;
+}
+
+.newsletter {
+    grid-area: right;
+    margin-right: 100px;
+    margin-left: auto;
+}
+
+.newsletter > form > input {
+    width: 300px;
+    margin-right: 40px;
+}
+
+.newsletter > form {
+    float: left;
+}
+
+}
+
+
+@media (min-width: 800px ) and (max-width: 1440px) {
+
+}
